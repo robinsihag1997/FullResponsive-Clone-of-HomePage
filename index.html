@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Website</title>
+    <link rel="stylesheet" href="/media-queries.css">
+    <title>Cloned by RobinSihag</title>
 </head>
 <body>
    <!-- <.......top-banner......> -->
@@ -32,7 +33,7 @@
         </a>
     </div>
 
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
         <ul class="flex">
             <li><a href="#"class="hover-link">Product</a></li>
             <li><a href="#"class="hover-link">Customer</a></li>
@@ -42,6 +43,7 @@
             <li><a href="#"class="hover-link primary-button">Sign up</a></li>
         </ul>
     </div>
+    <a href="#" class="nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
 
 </div>
 
@@ -59,6 +61,7 @@
         <div class="header-right">
             <img src="/img/asset 2.png" alt="HeroImage">
         </div>
+       
     </div>
  </header>
 <!-- <.......companies-section......> -->
@@ -147,7 +150,7 @@
   <!-- <.......big-feature-section......> -->
 
   <section class="big-feature-section">
-    <div class="container flex big-feature-container">
+    <div class="container flex big-feature-container reverse">
     
         <div class="feature-desc flex">
             <h4>Effortless validation for</h4>
@@ -164,7 +167,7 @@
   <!-- <.......big-feature-section......> -->
 
   <section class="big-feature-section">
-    <div class="container flex big-feature-container">
+    <div class="container flex big-feature-container ">
         <div class="feature-img">
             <img src="/img/asset 24.png" alt="">
         </div>
@@ -261,13 +264,13 @@
     <a href="#" class="hover-link">Terms & Condition</a>
     <a href="#" class="hover-link">Security Information</a>
     <a href="#" class="hover-link">
-        <img src="/img/asset 28.png" alt="facebookicon">
+        <img class="subfooter-icon"src="/img/asset 28.png" alt="facebookicon">
     </a>
     <a href="#" class="hover-link">
-        <img src="/img/asset 29.png" alt="twittericon">
+        <img class="subfooter-icon"src="/img/asset 29.png" alt="twittericon">
     </a>
     <a href="#" class="hover-link  ">
-        <img src="/img/asset 30.png" alt="linkdenicon">
+        <img class="subfooter-icon"src="/img/asset 30.png" alt="linkdenicon">
     </a>
    </div>
  </div>
@@ -278,5 +281,14 @@
 
 
     <script src="https://kit.fontawesome.com/03a832cd5e.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton=document.getElementById("nav-toggle");
+        const navLinks=document.getElementById("nav-links");
+
+
+        toggleButton.addEventListener("click",()=>{
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
